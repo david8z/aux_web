@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+  <picture>
+    <img src="http://127.0.0.1:8000/media/imagen/Screenshot_from_2019-07-22_17-29-08.png" width=200 />
+  </picture>
+  <div id="app">
+    <ol>
+      <todo-item
+        v-for="item in groceryList"
+        v-bind:todo="item"
+        v-bind:key="item.id">
+      </todo-item>
+    </ol>
+  </div>
+  <script type="text/javascript" src="{% static "js/index.js" %}">
+
+  </script>
+</body>
+</html>
